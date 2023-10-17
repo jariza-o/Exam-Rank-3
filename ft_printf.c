@@ -23,7 +23,7 @@ void    ft_putnbr(long long int nbr, int base, int *len)
         nbr *= -1;
         *len += write(1, "-", 1);
     }
-    if (nbr > base)
+    if (nbr >= base)
         ft_putnbr(nbr / base, base, len);
     *len += write(1, &str[nbr % base], 1);
 }
